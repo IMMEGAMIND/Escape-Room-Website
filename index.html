@@ -4,6 +4,7 @@
     <title>Cool Hacking Thing</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <body>
 <div class="game-text">
   Supa Sigma Hacking App
 </div>
@@ -14,13 +15,14 @@
     if (answer1) {
       let answer2 = prompt('What is used to pick up beakers?'); 
       if (answer2 === 'Beaker Tongs') { 
-        alert('Level 1 bypassed.');
+        alert('Level 1 Firewall bypassed.');
         let answer3 = prompt('What is the highest level shape in HHPS?'); 
         if (answer3 === 'Octagon') {
           alert('Level 2 Firewall bypassed.');
           let answer4 = prompt('Should you wear big sweaters in the lab?');
           if (answer4 === 'No') {
-            alert('Firewall Terminated. Your code is 1234');
+            alert('Level 3 Firewall bypassed. Firewall Fully Terminated.');
+            alert('The antidote is blue, non acidic and is highly corrosive')
           } else { alert('Alert! Connection terminated.'); }
         } else { alert('Alert! Connection terminated.'); }
       } else { alert('Alert! Connection terminated.'); }
@@ -30,5 +32,5 @@
   </button>
 </div>
 
-
+</body>
 </html>
