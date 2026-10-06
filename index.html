@@ -3,7 +3,7 @@
   <head>
     <title>Cool Hacking Thing</title>
     <link rel="stylesheet" href="style.css" />
-      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://w3.org viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☣️</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://w3.org viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☣️</text></svg>">
   </head>
   <body>
 <div class="game-text">
@@ -13,7 +13,7 @@
 <div class="button-layer">
   <button class="hacking-btn" onclick="
     let answer1 = prompt('You have begun hacking. The AI will ask you questions. Answer correctly to continue. Type 1 to continue hacking.');
-    if (answer1) {
+    if (answer1 === '1') {
       let answer2 = prompt('What is used to pick up beakers?'); 
       if (answer2 === 'Beaker Tongs') { 
         alert('Level 1 Firewall bypassed.');
@@ -22,21 +22,20 @@
           alert('Level 2 Firewall bypassed.');
           let answer4 = prompt('Should you wear big sweaters in the lab?');
           if (answer4 === 'No') {
-            alert('Level 3 Firewall bypassed.');{
-            let answer5 = prompt('How many hands should be on a microscop at all times?');
+            alert('Level 3 Firewall bypassed.');
+            let answer5 = prompt('How many hands should be on a microscope at all times?');
             if (answer5 === '2'){
-              alert('Level 4 Firewall bypassed.');{
-                let answer6 = prompt('When should you eat something in the lab to find out what it is?');
-                if (answer6 === 'Never'){
-                  alert('Level 5 Firewall bypassed. FIREWALL TERMINATED')
-                  alert('The conditions for the antidote: The antidote is blue, non acidic and highly corrosive.')
-                } else { alert('Alert! Connection terminated.'); }
+              alert('Level 4 Firewall bypassed.');
+              let answer6 = prompt('When should you eat something in the lab to find out what it is?');
+              if (answer6 === 'Never'){
+                alert('Level 5 Firewall bypassed. FIREWALL TERMINATED');
+                alert('The conditions for the antidote: The antidote is blue, non acidic and highly corrosive.');
               } else { alert('Alert! Connection terminated.'); }
             } else { alert('Alert! Connection terminated.'); }
           } else { alert('Alert! Connection terminated.'); }
         } else { alert('Alert! Connection terminated.'); }
       } else { alert('Alert! Connection terminated.'); }
-    }
+    } else { alert('Alert! Connection terminated.'); }
   ">
     Start Hacking
   </button>
