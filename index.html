@@ -3,43 +3,47 @@
   <head>
     <title>Cool Hacking Thing</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://w3.org viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☣️</text></svg>">
+    <!-- FIXED: Added missing %22 closing quote after http://w3.org -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://w3.org%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☣️</text></svg>">
   </head>
   <body>
-<div class="game-text">
-  Supa Sigma Hacking App
-</div>
+    <div class="game-text">
+      Supa Sigma Hacking App
+    </div>
 
-<div class="button-layer">
-  <button class="hacking-btn" onclick="
-    let answer1 = prompt('You have begun hacking. The AI will ask you questions. Answer correctly to continue. Type 1 to continue hacking.');
-    if (answer1 === '1') {
-      let answer2 = prompt('What is used to pick up beakers?'); 
-      if (answer2 === 'Beaker Tongs') { 
+    <div class="button-layer">
+      <button class="hacking-btn" onclick="startHacking()">
+        Start Hacking
+      </button>
+    </div>
+
+    <script>
+      function startHacking() {
+        let answer1 = prompt('You have begun hacking. The AI will ask you questions. Answer correctly to continue. Type 1 to continue hacking.');
+        if (answer1 !== '1') return alert('Alert! Connection terminated.');
+
+        let answer2 = prompt('What is used to pick up beakers?'); 
+        if (answer2 !== 'Beaker Tongs') return alert('Alert! Connection terminated.');
         alert('Level 1 Firewall bypassed.');
-        let answer3 = prompt('What is the highest level shape in HHPS?'); 
-        if (answer3 === 'Octagon') {
-          alert('Level 2 Firewall bypassed.');
-          let answer4 = prompt('Should you wear big sweaters in the lab?');
-          if (answer4 === 'No') {
-            alert('Level 3 Firewall bypassed.');
-            let answer5 = prompt('How many hands should be on a microscope at all times?');
-            if (answer5 === '2'){
-              alert('Level 4 Firewall bypassed.');
-              let answer6 = prompt('When should you eat something in the lab to find out what it is?');
-              if (answer6 === 'Never'){
-                alert('Level 5 Firewall bypassed. FIREWALL TERMINATED');
-                alert('The conditions for the antidote: The antidote is blue, non acidic and highly corrosive.');
-              } else { alert('Alert! Connection terminated.'); }
-            } else { alert('Alert! Connection terminated.'); }
-          } else { alert('Alert! Connection terminated.'); }
-        } else { alert('Alert! Connection terminated.'); }
-      } else { alert('Alert! Connection terminated.'); }
-    } else { alert('Alert! Connection terminated.'); }
-  ">
-    Start Hacking
-  </button>
-</div>
 
-</body>
+        let answer3 = prompt('What is the highest level shape in HHPS?'); 
+        if (answer3 !== 'Octagon') return alert('Alert! Connection terminated.');
+        alert('Level 2 Firewall bypassed.');
+
+        let answer4 = prompt('Should you wear big sweaters in the lab?');
+        if (answer4 !== 'No') return alert('Alert! Connection terminated.');
+        alert('Level 3 Firewall bypassed.');
+
+        let answer5 = prompt('How many hands should be on a microscope at all times?');
+        if (answer5 !== '2') return alert('Alert! Connection terminated.');
+        alert('Level 4 Firewall bypassed.');
+
+        let answer6 = prompt('When should you eat something in the lab to find out what it is?');
+        if (answer6 !== 'Never') return alert('Alert! Connection terminated.');
+        
+        alert('Level 5 Firewall bypassed. FIREWALL TERMINATED');
+        alert('The conditions for the antidote: The antidote is blue, non acidic and highly corrosive.');
+      }
+    </script>
+  </body>
 </html>
