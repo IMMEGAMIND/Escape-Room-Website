@@ -12,6 +12,6 @@ Body {
 .transparent-hacker-shape {
     mix-blend-mode: screen;
     display: block;
-    margin: 0 auto; /* Centers the image on the screen */
-    max-width: 100%; /* Keeps it from stretching too big */
+    margin: 0 auto;
+    max-width: 100%; 
 }
