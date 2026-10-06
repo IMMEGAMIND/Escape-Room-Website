@@ -4,3 +4,11 @@ Body {
     background-size: cover;
     background-color: black;
 }
+.transparent-scary-face {
+    mix-blend-mode: screen;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; 
+    width: 80%;
+    height: auto;
+}
