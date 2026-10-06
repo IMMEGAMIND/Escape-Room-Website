@@ -9,3 +9,9 @@ Body {
     background-size: cover;
     background-color: black;
 }
+.transparent-hacker-shape {
+    mix-blend-mode: screen;
+    display: block;
+    margin: 0 auto; /* Centers the image on the screen */
+    max-width: 100%; /* Keeps it from stretching too big */
+}
